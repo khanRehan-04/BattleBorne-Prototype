@@ -9,6 +9,9 @@ public class InputManager : MonoBehaviour
 
     PlayerControls playerControls;
     [SerializeField] Vector2 movementInput;
+    [SerializeField] float horizentalInput;
+    [SerializeField] float verticalInput;
+    [SerializeField] float movementAmount;
 
     private void Awake()
     {
@@ -58,5 +61,29 @@ public class InputManager : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.activeSceneChanged -= OnSceneChange;
+    }
+
+    private void Update()
+    {
+        HandleMovementInput();
+    }
+
+    private void HandleMovementInput()
+    {
+        verticalInput = movementInput.y;
+        horizentalInput = movementInput.x;
+
+        movementAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizentalInput));
+
+        if(movementAmount <= 0.5 && movementAmount > 0)
+        {
+            movementAmount = 0.5f;
+        }
+        else if(movementAmount > 0.5 && movementAmount <= 1)
+        {
+            movementAmount = 1;
+        }
+
+       
     }
 }
