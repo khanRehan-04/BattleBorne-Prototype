@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: -3230487004452354382}
   - component: {fileID: -4744038096908934775}
   - component: {fileID: 5414617992941472483}
+  - component: {fileID: 4930183466777458481}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -492,6 +493,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f74a4d4cf92194bb24a5423561b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalmovement: 0
+  Horizontalmovement: 0
+  moveAmount: 0
+  walkingSpeed: 2
+  runningSpeed: 5
+--- !u!143 &4930183466777458481
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612354017665733867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1747473393709303583
 GameObject:
   m_ObjectHideFlags: 0

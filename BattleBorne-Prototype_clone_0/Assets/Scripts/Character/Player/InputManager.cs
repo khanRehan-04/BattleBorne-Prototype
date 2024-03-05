@@ -8,10 +8,12 @@ public class InputManager : MonoBehaviour
     public static InputManager instance;
 
     PlayerControls playerControls;
+
     [SerializeField] Vector2 movementInput;
-    [SerializeField] float horizentalInput;
-    [SerializeField] float verticalInput;
-    [SerializeField] float movementAmount;
+
+    public float horizentalInput;
+    public float verticalInput;
+    public float movementAmount;
 
     private void Awake()
     {
